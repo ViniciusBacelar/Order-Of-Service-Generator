@@ -1,0 +1,36 @@
+# Order of Service Generator
+==========================
+
+This Python script generates a Word document (.docx) that serves as an order of service for a computer maintenance company. The document includes the customer's information, computer information, and a list of services to be performed.
+
+## Usage
+
+1. Run the script and input the required information:
+	* Customer name
+	* Customer address
+	* Customer phone number
+	* Customer email
+	* Computer model
+	* Computer serial number
+	* Maintenance cost
+	* List of services to be performed (e.g. formatting, hardware upgrade)
+2. The script will generate a Word document with the inputted information.
+
+## Features
+
+* Generates a professional-looking Word document with the company's logo and formatting
+* Includes customer information, computer information, and a list of services to be performed
+* Allows for customization of the document's content and layout
+
+## Requirements
+
+* Python 3.x
+* `docx` library (install with `pip install docx`)
+
+## License
+
+This script is licensed under the MIT License. See `LICENSE` for details.
+
+## Author
+
+Vinicius Bacelar Santana
