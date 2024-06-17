@@ -78,6 +78,9 @@ def add_services(doc, services, styles):
     services_table.autofit = True
     services_table.cell(0, 0).text = 'Serviço'
     services_table.cell(0, 1).text = 'Descrição'
+    for i, (header, value) in enumerate(services):
+        services_table.cell(i+1, 0).text = header
+        services_table.cell(i+1, 1).text = value
 
 def add_footer(doc, styles):
     _, font_name_body, _ = styles
@@ -117,8 +120,18 @@ computer_info = {
     'maintenance_cost': custo
 }
 
-services = [
-    {'name': 'formatação', 'description': 'serviço descrição'},
-]
+# num_services = int(input("Quantos serviços: "))
+# services = [(
+#     'formatacao','instalar windows 11'
+# ),
+# ('troca de armazenamento','troca de de HD por um SSD 420gb',
+# )]
+
+services=[]
+z=input("Quantidade de serviços: ")
+for x in range(int(z)):
+    name = input(f"Nome do serviço {x+1}: ")
+    description = input(f"Descrição do serviço {x+1}: ")
+    services.append((name, description))
 
 create_word_document(file_name, customer_name, customer_info, computer_info, services)
