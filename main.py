@@ -79,15 +79,6 @@ def add_services(doc, services, styles):
     services_table.cell(0, 0).text = 'Serviço'
     services_table.cell(0, 1).text = 'Descrição'
 
-num_services = int(input("Digite o número de serviços: "))
-
-services = []
-
-for i in range(num_services):
-    service_name = input(f"Digite o nome do serviço {i+1}: ")
-    service_description = input(f"Digite a descrição do serviço {i+1}: ")
-    services.append({'name': service_name, 'description': service_description})
-
 def add_footer(doc, styles):
     _, font_name_body, _ = styles
     doc.add_paragraph('')  # Empty line for spacing
@@ -127,7 +118,7 @@ computer_info = {
 }
 
 services = [
-    {'name': service_name[0], 'description': service_description[0]},
+    {'name': 'formatação', 'description': 'serviço descrição'},
 ]
 
 create_word_document(file_name, customer_name, customer_info, computer_info, services)
